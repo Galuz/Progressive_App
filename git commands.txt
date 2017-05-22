@@ -1,0 +1,3 @@
+git commands
+git branch: para ver todas las ramas
+git checkout + branch: para cambiar de rama
