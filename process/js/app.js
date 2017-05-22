@@ -4,7 +4,25 @@ var Handlebars = require('handlebars');
 
 $(function(){
 	var topoffset = 50;
-	$('.loader').fadeOut(1000);
+	$.getJSON('/data/pets.json', function(data){
+		$('.loader').fadeOut(1000);
+		var slideshowTemplate = $('#slideshow-template').html();
+		var slideshowScript = Handlebars.compile(slideshowTemplate);
+		
+		$('.loader').fadeOut(1000);
+		$('#slideshow-content').append(slideshowScript(data));
+		//Replace img
+		$('#slideshow .item img').each(function(){
+			var imgSrc = $(this).attr('src');
+			$(this).parent().css({'background-image': 'url('+ imgSrc + ')'});
+			$(this).remove();
+		});
+
+		//activate carouse
+		$('.carousel').carousel({
+			pause: false
+		})
+	});
 	$('.navbar-fixed-top').on('activate.bs.scrollspy', function(){
 		var hash = $(this).find('li.active a').attr('href');
 
@@ -14,7 +32,7 @@ $(function(){
 			$('header nav').removeClass('inbody');
 		}
 	});
-	
+
   //Use smooth scrolling when clicking on navigation
   $('.navbar a').click(function() {
     if (location.pathname.replace(/^\//,'') ===

@@ -20,7 +20,6 @@
 		<div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width: 100%"></div>
 	</div>
 </div>
-<div id="slideshow"></div>
 <header>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
@@ -41,9 +40,24 @@
 				</ul>
 			</div>
 		</div>
-	</nav>
-</header>
+	</nav><!--nav-->
+	<script id="slideshow-template" type="text/x-handlebars-template">
+		<div class="carousel fade" data-ride="carousel" id="slideshow">
+			<div class="carousel-inner">
+				{{#each slideshow}}
+				{{#if @first}}
+				<div class="item active"><img src="images/pets/{{filename}}.jpg" alt="{{hero}} photo"></div>
+				{{else}}
+				<div class="item"><img src="images/pets/{{filename}}.jpg" alt="{{hero}} photo"></div>
+				{{/if}}
+				{{/each}}
+			</div><!--carousel inner-->
+			<a class="left carousel-control" href="#slideshow" role="button" data-slide="prev"></a>
+			<a class="right carousel-control" href="#slideshow" role="button" data-slide="next"></a>
+		</div><!--carousel fade-->
+	</script>
 <div id="slideshow-content"></div>
+</header>
 <main>
 	<div class="page" id="adoption">
 		<div class="container">
