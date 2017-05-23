@@ -59,15 +59,43 @@
 <div id="slideshow-content"></div>
 </header>
 <main>
-	<div class="page" id="adoption">
+	<div class="page" id="games">
 		<div class="container">
 			<h2 class="page-headline">Video Games</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat.</p>
+			<script id="games-template" type="text/handlebars-template">
+				{{#each games}}
+				<div class="col-md-2 col-sm-3 col-xs-4 openpetmodal" data-toggle="modal" data-target="#games{{filename}}">
+					<img class="img-circle" src="images/game_images/{{filename}}_tn.jpg" alt="{{hero}} photo">
+				</div><!--Column-->
+				<div class="modal fade" id="games{{filename}}" tabindex="-1" role="dialog" aria-labelledby="petModal">
+					<div class="modal-dialog" data-dismiss="modal" aria-label="Close" role="document">	
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" 
+										data-dismiss="modal" 
+										aria-label="Close" 
+										role="document">
+										<span aira-hidden="true">&times;</span>
+								</button>
+										<h2 class="modal-title modal-petname">{{hero}}</h2>
+										<div class="modal-petbreed">{{type}}</div>
+							</div><!--modal header-->
+							<div class="modal-body modal-petimage">
+								<img class="img-responsive" src="images/game_images/{{filename}}_tn.jpg" alt="{{hero}} photo">
+								<p class="modal-petinfo">{{description}}</p>
+							</div>
+						</div><!--modal content-->				
+					</div><!--modal dialog-->
+				</div><!--modal fade-->
+				{{/each}}
+			</script>
+			<div id="games-content"></div>
 		</div> <!--Container-->
-	</div><!--page-adoption-->
+	</div><!--page-games-->
 	<div class="page" id="appointments">
 		<div class="container">
 			<h2 class="page-headline">Streaming</h2>

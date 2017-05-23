@@ -191,20 +191,20 @@ header .inbody .navbar-brand span.subhead {
   margin-bottom: 20px;
 }
 
-#adoption .col-xs-1, #adoption .col-sm-1, #adoption .col-md-1, #adoption .col-lg-1, #adoption .col-xs-2, #adoption .col-sm-2, #adoption .col-md-2, #adoption .col-lg-2, #adoption .col-xs-3, #adoption .col-sm-3, #adoption .col-md-3, #adoption .col-lg-3, #adoption .col-xs-4, #adoption .col-sm-4, #adoption .col-md-4, #adoption .col-lg-4, #adoption .col-xs-5, #adoption .col-sm-5, #adoption .col-md-5, #adoption .col-lg-5, #adoption .col-xs-6, #adoption .col-sm-6, #adoption .col-md-6, #adoption .col-lg-6, #adoption .col-xs-7, #adoption .col-sm-7, #adoption .col-md-7, #adoption .col-lg-7, #adoption .col-xs-8, #adoption .col-sm-8, #adoption .col-md-8, #adoption .col-lg-8, #adoption .col-xs-9, #adoption .col-sm-9, #adoption .col-md-9, #adoption .col-lg-9, #adoption .col-xs-10, #adoption .col-sm-10, #adoption .col-md-10, #adoption .col-lg-10, #adoption .col-xs-11, #adoption .col-sm-11, #adoption .col-md-11, #adoption .col-lg-11, #adoption .col-xs-12, #adoption .col-sm-12, #adoption .col-md-12, #adoption .col-lg-12 {
+#games .col-xs-1, #games .col-sm-1, #games .col-md-1, #games .col-lg-1, #games .col-xs-2, #games .col-sm-2, #games .col-md-2, #games .col-lg-2, #games .col-xs-3, #games .col-sm-3, #games .col-md-3, #games .col-lg-3, #games .col-xs-4, #games .col-sm-4, #games .col-md-4, #games .col-lg-4, #games .col-xs-5, #games .col-sm-5, #games .col-md-5, #games .col-lg-5, #games .col-xs-6, #games .col-sm-6, #games .col-md-6, #games .col-lg-6, #games .col-xs-7, #games .col-sm-7, #games .col-md-7, #games .col-lg-7, #games .col-xs-8, #games .col-sm-8, #games .col-md-8, #games .col-lg-8, #games .col-xs-9, #games .col-sm-9, #games .col-md-9, #games .col-lg-9, #games .col-xs-10, #games .col-sm-10, #games .col-md-10, #games .col-lg-10, #games .col-xs-11, #games .col-sm-11, #games .col-md-11, #games .col-lg-11, #games .col-xs-12, #games .col-sm-12, #games .col-md-12, #games .col-lg-12 {
     padding-right: 5px;
     padding-left: 5px;
 }
 
-#adoption {
+#games {
   background-color: #8AC8E1;
 }
 
-#adoption .page-headline {
+#games .page-headline {
   color: hsl(202, 45%, 37%);
 }
 
-#adoption img {
+#games img {
   width: 100%;
   margin-bottom: 10px;
   cursor: pointer;

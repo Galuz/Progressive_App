@@ -8,9 +8,13 @@ $(function(){
 		$('.loader').fadeOut(1000);
 		var slideshowTemplate = $('#slideshow-template').html();
 		var slideshowScript = Handlebars.compile(slideshowTemplate);
+
+		var gamesTemplate = $('#games-template').html();
+		var gamesScript = Handlebars.compile(gamesTemplate);
 		
 		$('.loader').fadeOut(1000);
 		$('#slideshow-content').append(slideshowScript(data));
+		$('#games-content').append(gamesScript(data));
 		//Replace img
 		$('#slideshow .item img').each(function(){
 			var imgSrc = $(this).attr('src');

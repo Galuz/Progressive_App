@@ -4,5 +4,14 @@
       { "hero": "diva", "type": "tank", "description": "the work of this amazing hero is cover all atacks from the enemy, and stay save all the allies", "filename": "Casper-178870793"},
       { "hero": "tracer", "type": "dps",  "description": "The work of this hero is go though the enemy and kill them all.", "filename": "Chip-519252509"},
       { "hero": "soldier76", "type": "dps", "description": "The work of this hero is kill the fly enemies, and keep shooting from the back yard","filename": "Nugget-499158128"}
-  ]
+  ],
+    "games":
+    [
+   	  { "hero": "diva", "type": "tank", "description": "the work of this amazing hero is cover all atacks from the enemy, and stay save all the allies", "filename": "Casper-178870793"},
+      { "hero": "tracer", "type": "dps",  "description": "The work of this hero is go though the enemy and kill them all.", "filename": "Chip-519252509"},
+      { "hero": "soldier76", "type": "dps", "description": "The work of this hero is kill the fly enemies, and keep shooting from the back yard","filename": "Nugget-499158128"},
+      { "hero": "diva", "type": "tank", "description": "the work of this amazing hero is cover all atacks from the enemy, and stay save all the allies", "filename": "Casper-178870793"},
+      { "hero": "tracer", "type": "dps",  "description": "The work of this hero is go though the enemy and kill them all.", "filename": "Chip-519252509"},
+      { "hero": "soldier76", "type": "dps", "description": "The work of this hero is kill the fly enemies, and keep shooting from the back yard","filename": "Nugget-499158128"}
+    ]
 }
