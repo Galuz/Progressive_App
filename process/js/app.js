@@ -11,10 +11,15 @@ $(function(){
 
 		var gamesTemplate = $('#games-template').html();
 		var gamesScript = Handlebars.compile(gamesTemplate);
+
+		var streamingTemplate = $('#streaming-template').html();
+		var streamingScript = Handlebars.compile(streamingTemplate);
 		
 		$('.loader').fadeOut(1000);
 		$('#slideshow-content').append(slideshowScript(data));
 		$('#games-content').append(gamesScript(data));
+		$('#streaming-content').append(streamingScript(data));
+		
 		//Replace img
 		$('#slideshow .item img').each(function(){
 			var imgSrc = $(this).attr('src');
@@ -35,6 +40,14 @@ $(function(){
 		} else {
 			$('header nav').removeClass('inbody');
 		}
+	});
+
+	$(document).on('click','.openpetmodal', function(){
+		$('.modal-heroname').html($(this).data('heroname'));
+		$('.modal-herotype').html($(this).data('herotype'));
+		$('.modal-heroinfo').html($(this).data('heroinfo'));
+		$('.modal-heroimage').attr('src','images/game_images/'+$(this).data('heroimage') + ('.jpg'));
+		$('.modal-heroimage').attr('alt',$(this).data('heroname') + 'photo');
 	});
 
   //Use smooth scrolling when clicking on navigation

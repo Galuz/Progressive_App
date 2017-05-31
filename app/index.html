@@ -66,31 +66,18 @@
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat.</p>
-			<script id="games-template" type="text/handlebars-template">
+			<script id="games-template" type="text/x-handlebars-template">
 				{{#each games}}
-				<div class="col-md-2 col-sm-3 col-xs-4 openpetmodal" data-toggle="modal" data-target="#games{{filename}}">
+				<div 	class="col-md-2 col-sm-3 col-xs-4 openpetmodal" 
+						data-toggle="modal" 
+						data-target="#wisdompetmodal"
+						data-heroname="{{hero}}"
+						data-herotype="{{type}}"
+						data-heroinfo="{{description}}"
+						data-heroimage="{{filename}}">
 					<img class="img-circle" src="images/game_images/{{filename}}_tn.jpg" alt="{{hero}} photo">
 				</div><!--Column-->
-				<div class="modal fade" id="games{{filename}}" tabindex="-1" role="dialog" aria-labelledby="petModal">
-					<div class="modal-dialog" data-dismiss="modal" aria-label="Close" role="document">	
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" 
-										data-dismiss="modal" 
-										aria-label="Close" 
-										role="document">
-										<span aira-hidden="true">&times;</span>
-								</button>
-										<h2 class="modal-title modal-petname">{{hero}}</h2>
-										<div class="modal-petbreed">{{type}}</div>
-							</div><!--modal header-->
-							<div class="modal-body modal-petimage">
-								<img class="img-responsive" src="images/game_images/{{filename}}_tn.jpg" alt="{{hero}} photo">
-								<p class="modal-petinfo">{{description}}</p>
-							</div>
-						</div><!--modal content-->				
-					</div><!--modal dialog-->
-				</div><!--modal fade-->
+				
 				{{/each}}
 			</script>
 			<div id="games-content"></div>
@@ -103,9 +90,57 @@
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat.</p>
+			<script id="streaming-template" type="text/x-handlebars-template">
+				{{#each streaming}}
+				<div 	class="appointment media openpetmodal"
+						data-toggle="modal" 
+						data-target="#wisdompetmodal"
+						data-heroname="{{hero}}"
+						data-herotype="{{type}}"
+						data-heroinfo="{{description}}"
+						data-heroimage="{{filename}}">
+
+						<div class="media-left media-top">
+							<img 	class="media-object appointment-img img-rounded" src="images/game_images/{{filename}}_tn.jpg" 
+							alt="{{hero}} photo">
+						</div> <!--media-left media-top-->
+						<div class="media-body">
+							<h3 class="media-heading appointments-heading">{{hero}}
+								<span class="appointment-breed">{{type}}</span>
+							</h3>
+							<div class="appointment-owner">
+								<div class="appointment-reason">{{description}}</div>
+							</div>
+						</div><!--media body-->
+				</div><!--streaming media openpetmodal-->
+				{{/each}}
+			</script>
+			<div id="streaming-content"></div>
 		</div><!--container-->
 	</div><!--page-appointments-->
 </main>
+
+<div class="modal fade" id="wisdompetmodal" tabindex="-1" role="dialog" aria-labelledby="petModal">
+					<div class="modal-dialog" data-dismiss="modal" aria-label="Close" role="document">	
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" 
+										data-dismiss="modal" 
+										aria-label="Close" 
+										role="document">
+										<span aira-hidden="true">&times;</span>
+								</button>
+										<h2 class="modal-title modal-heroname"></h2>
+										<div class="modal-herotype"></div>
+							</div><!--modal header-->
+							<div class="modal-body modal-heroimage">
+								<img class="img-responsive modal-heroimage">
+								<p class="modal-heroinfo"></p>
+							</div>
+						</div><!--modal content-->				
+					</div><!--modal dialog-->
+				</div><!--modal fade-->
+
 <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
