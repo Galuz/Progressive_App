@@ -4,7 +4,16 @@ var Handlebars = require('handlebars');
 
 $(function(){
 	var topoffset = 50;
-	$.getJSON('/data/pets.json', function(data){
+
+	if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('./service-worker.js')
+      .then(function() {
+        console.log('Service Worker Active');
+      })
+  }
+
+	$.getJSON('/data/pets.json', function(data) {
 		$('.loader').fadeOut(1000);
 		var slideshowTemplate = $('#slideshow-template').html();
 		var slideshowScript = Handlebars.compile(slideshowTemplate);
@@ -30,8 +39,13 @@ $(function(){
 		//activate carouse
 		$('.carousel').carousel({
 			pause: false
-		})
+		});
 	});
+
+	$('.reload').click(function() {
+    window.location.reload();
+ 	 });
+	
 	$('.navbar-fixed-top').on('activate.bs.scrollspy', function(){
 		var hash = $(this).find('li.active a').attr('href');
 
