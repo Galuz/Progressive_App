@@ -6,12 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Progressive Web Apps</title>
   <link rel="stylesheet" type="text/css" href="/css/app.css">
-  <style type="text/css">
-  	.page, #slideshow{
-  		height: 100vh;
-  		background: gray;
-  	}
-  </style>
+  <link rel="manifest" href="/manifest.json">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta name="apple-mobile-web-app-title" content="OverWatch">
+  <meta name="apple-touch-icon" content="images/icons/icon-152x152.png">
+  <meta name="msapplicartion-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplicartion-TileColor" content="#2F3BA2">
 </head>
 <body>
 <div class="loader">
@@ -24,6 +27,7 @@
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
+			<img class="reload reloadbtn-lg" src="images/icons/icon_reload.svg" alt="Reload Button" />
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-taget="#collapse">
 				<span class="sr-only">Toggle Navigation</span>
 				<span class="icon-bar"></span>
@@ -34,6 +38,7 @@
 			</div><!--navbar Header-->
 			<div class="collapse navbar-collapse" id="collapse">
 				<ul class="nav navbar-nav navbar-right">
+					<li><img class="reload reloadbtn" src="images/icons/icon_reload.svg" alt="Reload Button" /></li>
 					<li class="active"><a href="#slideshow">Home</a></li>
 					<li class=""><a href="#games">Video Games</a></li>
 					<li class=""><a href="#appointments">Streaming</a></li>
